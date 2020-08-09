@@ -1,94 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Login V18</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vistas/dist/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vistas/dist/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vistas/dist/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vistas/dist/vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vistas/dist/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vistas/dist/vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vistas/dist/vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vistas/dist/vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vistas/dist/css/util.css">
-	<link rel="stylesheet" type="text/css" href="vistas/dist/css/main.css">
-<!--===============================================================================================-->
+	<title>Divina</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<link rel="icon" href="vistas/plugins/assets/images/favicon-16x16.png" type="image/x-icon">
+	<link rel="stylesheet" href="vistas/plugins/assets/fonts/fontawesome/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="vistas/plugins/assets/plugins/animation/css/animate.min.css">
+	<link rel="stylesheet" href="vistas/plugins/assets/css/style.css">
+	<script src="vistas/plugins/assets/js/vendor-all.min.js"></script>
+	<script src="vistas/plugins/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
 </head>
-<body style="background-color: #0a0a0a;">
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="post">
-					<span class="login100-form-title p-b-43">
-						Iniciar Sesion
-					</span>
-					
-					
-					<div class="wrap-input100 validate-input" > 
-						<input class="input100" type="text"  name="ingUsuario">
-						<span class="focus-input100"></span>
-						<span class="label-input100">Usuario</span>
-					</div>
-					
-					
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="ingPassword">
-						<span class="focus-input100"></span>
-						<span class="label-input100">Password</span>
-					</div>
+<div class="auth-wrapper">
+	<div class="auth-content container">
+		<div class="card">
+			<div class="row align-items-center">
+				<div class="col-md-6">
+					<div class="card-body">
+						<h1><img src="vistas/plugins/assets/images/favicon-32x32.png" alt="" class="img-fluid mb-4"> Iniciar Sesion</h1>
+						<form method="POST">
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="feather icon-mail"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Usuario" name="ingUsuario">
+							</div>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="feather icon-lock"></i></span>
+								</div>
+								<input type="password" class="form-control" placeholder="Password" name="ingPassword">
+							</div>
 
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Ingresar
-						</button>
+							<button class="btn btn-primary mb-4">Login</button>
+
+							<?php
+
+							$login = new ControladorUsuarios();
+							$login->ctrIngresar();
+							?>
+						</form>
 					</div>
-          <?php
-
-$login = new ControladorUsuarios();
-$login->ctrIngresar();
-?>
-				</form>
-
-				<div class="login100-more" style="background-image: url('vistas/dist/img/c.jpg');">
+				</div>
+				<div class="col-md-6 d-none d-md-block">
+					<img src="vistas/plugins/assets/images/auth-bg.jpg" alt="" class="img-fluid">
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	
+</div>
+<div class="footer-fab">
+	<div class="b-bg">
+		<i class="fas fa-question"></i>
+	</div>
+	<div class="fab-hover">
+		<ul class="list-unstyled">
+			<li><a href="vistas/plugins/doc/index.html" target="_blank" data-text="Document" class="btn btn-icon btn-rounded btn-primary m-0"><i class="feather icon feather icon-book"></i></a></li>
+		</ul>
+	</div>
+</div>
 
-	
-	
-<!--===============================================================================================-->
-	<script src="vistas/dist/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vistas/dist/vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vistas/dist/vendor/bootstrap/js/popper.js"></script>
-	<script src="vistas/dist/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vistas/dist/vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vistas/dist/vendor/daterangepicker/moment.min.js"></script>
-	<script src="vistas/dist/vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vistas/dist/vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="vistas/js/main.js"></script>
 
 </body>
+
 </html>
