@@ -1,14 +1,4 @@
-/**======================================================================
-=========================================================================
-Template Name: Flash Able Admin Template
-Author: Codedthemes
-supports: https://codedthemes.support-hub.io/
-File: style.css
-=========================================================================
 
-/**  =====================
-     Google Font
-==========================  **/
 @import url("https://fonts.googleapis.com/css?family=Mada:400,500,600");
 
 @import url("../plugins/bootstrap/css/bootstrap.min.css");
@@ -18,18 +8,16 @@ File: style.css
 @import url("../plugins/jquery-scrollbar/css/perfect-scrollbar.css");
 
 @import url("../fonts/datta/datta-icon.css");
-/**  =====================
-      Custom css start
-==========================  **/
+
 body {
     font-family: "Mada", sans-serif;
     font-size: 14px;
-    color: #686c71;
+    color: #265896;
     font-weight: 400;
-    background: #eff3f6;
+    background: #0e7acc8c;
     position: relative;
 }
-
+ 
 *:focus {
     outline: none;
 }
@@ -553,8 +541,7 @@ p.text-muted {
     -webkit-font-smoothing: antialiased;
 }
 
-/* material icon for material datetime picker */
-/* new Elite Able 7-dec-2018 */
+
 div.code-toolbar > .toolbar button,
 div.code-toolbar > .toolbar span,
 div.code-toolbar > .toolbar a {
@@ -582,10 +569,6 @@ pre[class*=language-]:before {
     }
 }
 
-/**  =====================
-      Generic-class css start
-========================== **/
-/*====== Padding , Margin css starts ======*/
 .p-0 {
     padding: 0px;
 }

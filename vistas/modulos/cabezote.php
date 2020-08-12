@@ -17,19 +17,27 @@
     
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="fas fa-user-times"></i>
+        <li class="dropdown user user-menu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+ 
+ <?php
+
+ if($_SESSION["foto"] != ""){
+
+   echo '<img src="'.$_SESSION["foto"].'" class="user-image">';
+
+ }else{
+
+
+   echo '<img src="vistas/img/usuarios/default/anonymous.png" class="user-image">';
+
+ }
+
+
+ ?>
           
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <?php 
-          if($_SESSION['nombre']!=""){
-            echo ' <span class="dropdown-item dropdown-header">'.$_SESSION["nombre"].'</span>';
-          }else{
-            echo '<span class="dropdown-item dropdown-header">Nombre de Usuario</span>';  
-          }
-          ?>
-         
           <div class="dropdown-divider"></div>
           <a href="logout" class="dropdown-item">
             <i class="fas fa-user-times mr-2"></i> Cerrar Sesión
@@ -41,4 +49,3 @@
     </ul>
   </nav>
   <!-- /.navbar -->
-

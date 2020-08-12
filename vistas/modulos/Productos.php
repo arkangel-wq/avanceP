@@ -1,3 +1,4 @@
+  
 <!-- Content Wrapper. Contains page content -->
 
 <div class="content-wrapper">
@@ -17,7 +18,6 @@
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
   </div>
-
   <!-- /.tabla usuarios -->
   <section class="content">
     <div class="box">
@@ -25,7 +25,6 @@
         <div class="card-header">
           <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarProducto">Agregar Producto</button>
         </div>
-
       <div class="box-body">
        <table class="table table-bordered table-striped dt-responsive tablaProductos  " width="100%"> 
         <thead>
@@ -44,13 +43,9 @@
         </thead>
        
        </table>
-
       </div>
-
     </div>
-
   </section>
-
 </div>
  
 <!----------------------------------------------------------
@@ -60,30 +55,50 @@ MODAL PARA AGREGAR PRODUCTOS
     <form role="form" method="post" >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-
-
-
           <div class="modal-header" style="background:#343a40;color:white">
-
             <h5 class="modal-title" id="modalAgregarProducto">Agregar Producto</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-
             <form role="form">
               <div class="card-body">
+              <div class="form-group">
+                <div>
+
+                <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Seleccionar Categoria</label>
+                  <select class="form-control select2" style="width: 210%;" id="nuevaCategoria" name="nuevaCategoria" required>
+                    <option selected="selected">Seleccionar Categoria</option>
+                    <?php
+
+                  $item = null;
+                  $valor = null;
+
+                  $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
+
+                  foreach ($categorias as $key => $value) {
+                    
+                    echo '<option value="'.$value["id"].'">'.$value["categoria"].'</option>';
+                  }
+
+                  ?>
+                  </select>
+                </div>
+
+                </div>
+              
 <!----------------------------------------------------------
 CODIGO
 ---------------------------------------------------------->
-
-
              <div class="input-group mb-3">
                   <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-code""></i></span>
+                    <span class="input-group-text"><i class="fas fa-code"></i></span>
                   </div>
-                  <input type="text" class="form-control" name="nuevoCodigo"placeholder=" Ingresar Codigo" required>
+                  <input type="text" class="form-control" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" readonly required>
 <!----------------------------------------------------------
 DESCRIPCION
 ---------------------------------------------------------->
@@ -151,13 +166,10 @@ CODIGO
                  
                 </div>
             
-
-
                 
-
 <!----------------------------------------------------------
 CATEGORIA
----------------------------------------------------------->
+
                 <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -168,8 +180,7 @@ CATEGORIA
                     <option>Clavos</option>
                     <option>Delaware</option>
                   </select>
-                </div>
-
+                </div>---------------------------------------------------------->
         <!--=====================================
         PIE DEL MODAL
         ======================================-->
@@ -179,7 +190,6 @@ CATEGORIA
             <p class="center-block">Peso maximo de la foto 200Mb</p>
             <img src="vistas/img/usuarios/Default/anony.png" class="thumbnail center-block previsualizar" width="100px">
           </div>
-
             </form>
           </div>
         </div>
@@ -189,16 +199,11 @@ CATEGORIA
         </div>
       </div>
   </div>
-
 </div>
         
-
       </form>
-
     </div>
-
   </div>
-
 </div>
 <!----------------------------------------------------------
 MODAL PARA AGREGAR PRODUCTOS  
@@ -206,17 +211,12 @@ MODAL PARA AGREGAR PRODUCTOS
 <!--=====================================
 MODAL EDITAR CATEGORÍA
 ======================================-->
-
 <!-- Modal  bootrap-->
   <div class="modal fade" id="modalEditarCategoria" tabindex="-1" role="dialog" aria-labelledby="modalEditarCategoria" aria-hidden="true">
     <form role="form" method="post" enctype="multipart/form-data">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-
-
-
           <div class="modal-header" style="background:#343a40;color:white">
-
             <h5 class="modal-title" id="modalEditarCategoria">Editar Productos</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -250,7 +250,6 @@ MODAL EDITAR CATEGORÍA
                         <option selected="selected">Selecciona Perfil</option>
                         <option>Administrador </option>
                         <option>Vendedor</option>
-
                       </select>
                     </div>
                     <!-- /.card-body -->
@@ -264,25 +263,16 @@ MODAL EDITAR CATEGORÍA
             <img src="vistas/img/usuarios/Default/anonymous.png" class="thumbnail center-block previsualizar" width="100px">
             <input type="hidden" name="fotoActual" id="fotoActual">
           </div>
-
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-primary">Modificar Usuario</button>
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
-
         </div>
       </div>
   </div>
-
 </div>
-
   
-
       </form>
-
     </div>
-
   </div>
-
 </div>
-

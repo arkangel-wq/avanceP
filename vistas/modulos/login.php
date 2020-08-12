@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="vistas/plugins/assets/css/style.css">
 	<script src="vistas/plugins/assets/js/vendor-all.min.js"></script>
 	<script src="vistas/plugins/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
+ 
 </head>
 <div class="auth-wrapper">
 	<div class="auth-content container">
@@ -28,17 +28,17 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="feather icon-mail"></i></span>
 								</div>
-								<input type="text" class="form-control" placeholder="Usuario" name="ingUsuario">
+								<input type="text" class="form-control" placeholder="Usuario" name="ingUsuario"  required="">
 							</div>
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="feather icon-lock"></i></span>
 								</div>
-								<input type="password" class="form-control" placeholder="Password" name="ingPassword">
-							</div>
+								<input type="password" class="form-control" placeholder="Password" name="ingPassword" required="">
+							</div> 
 
 							<button class="btn btn-primary mb-4">Login</button>
-
+               
 							<?php
 
 							$login = new ControladorUsuarios();
@@ -48,7 +48,7 @@
 					</div>
 				</div>
 				<div class="col-md-6 d-none d-md-block">
-					<img src="vistas/plugins/assets/images/auth-bg.jpg" alt="" class="img-fluid">
+					<img src="vistas/plugins/assets/images/img2.png" alt="" class="img-fluid">
 				</div>
 			</div>
 		</div>

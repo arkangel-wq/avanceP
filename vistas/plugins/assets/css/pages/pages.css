@@ -148,7 +148,7 @@
   .to-do-list .done-task p,
   .to-do-list .done-task span {
     text-decoration: line-through;
-}
+} 
 
 .to-do-list .checkbox-fade .check-task {
     display: block;
@@ -218,7 +218,7 @@ new-task label input[type=checkbox] {
 /* ===================== to do page end =========================================*/
 /* ===================== Note page start ========================================*/
 .note-card .note-box-aside {
-    border-right: 1px solid #ddd;
+    border-right: 1px solid rgb(7, 7, 7);
 }
 
 .note-card .Note-header {
