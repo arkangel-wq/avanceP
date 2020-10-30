@@ -1,31 +1,25 @@
 <!-- Content Wrapper. Contains page content -->
-
 <div class="content-wrapper">
-  <!-- Content Header (Page header) -->
-  <div class="content-header">
-    <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Administrador de Usuarios</h1>
-        </div><!-- /.col -->
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Tortilleria</a></li>
-            <li class="breadcrumb-item active">Usuarios</li>
-          </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
-    </div><!-- /.container-fluid -->
-  </div>
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Adiministrador De Usuarios</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Tortilleria</a></li>
+              <li class="breadcrumb-item active">Usuarios</li>
+            </ol>
+          </div><!-- /.col -->
 
-  <!-- /.tabla usuarios -->
-  <section class="content">
-    <div class="box">
-      <div class="box-header with-border">
-        <div class="card-header">
-          <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario">Agregar Usuarios</button>
-        </div>
-
+          <div class="card card-primary card-outline " style="width: 100rem;">
+              <div class="card-header">
+              <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario">Agregar Usuarios</button>
+              </div>
+              <div class="card-body">
+              
       <div class="box-body">
        <table class="table table-bordered table-striped dt-responsive tablas tabladatatable" width="100%"> 
         <thead>
@@ -85,15 +79,7 @@
        </table>
 
       </div>
-
-    </div>
-
-  </section>
-
-</div>
- 
-<!-- Modal  bootrap-->
-  <div class="modal fade" id="modalAgregarUsuario" tabindex="-1" role="dialog" aria-labelledby="modalAgregarUsuario" aria-hidden="true">
+      <div class="modal fade" id="modalAgregarUsuario" tabindex="-1" role="dialog" aria-labelledby="modalAgregarUsuario" aria-hidden="true">
     <form role="form" method="post"  enctype="multipart/form-data">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -263,3 +249,14 @@ $editarUsuario->ctrEditarUsuario();
   $borrarUsuario = new ControladorUsuarios();
   $borrarUsuario -> ctrBorrarUsuario();
   ?>
+              </div>
+             
+              
+            
+            </div>
+            
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+  </div>
+  <!-- /.content-wrapper -->

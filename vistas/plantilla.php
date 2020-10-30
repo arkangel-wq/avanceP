@@ -72,6 +72,23 @@ session_start();
   <script src="vistas/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
   <script src="vistas/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+  <!-- InputMask -->
+<script src="vistas/plugins/moment/moment.min.js"></script>
+<script src="vistas/plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+
+<!-- fullCalendar -->
+<link rel="stylesheet" href="vistas/plugins/fullcalendar/main.min.css">
+  <link rel="stylesheet" href="vistas/plugins/fullcalendar-daygrid/main.min.css">
+  <link rel="stylesheet" href="vistas/plugins/fullcalendar-timegrid/main.min.css">
+  <link rel="stylesheet" href="vistas/plugins/fullcalendar-bootstrap/main.min.css">
+
+  <script src="vistas/plugins/moment/moment.min.js"></script>
+<script src="vistas/plugins/fullcalendar/main.min.js"></script>
+<script src="vistas/plugins/fullcalendar-daygrid/main.min.js"></script>
+<script src="vistas/plugins/fullcalendar-timegrid/main.min.js"></script>
+<script src="vistas/plugins/fullcalendar-interaction/main.min.js"></script>
+<script src="vistas/plugins/fullcalendar-bootstrap/main.min.js"></script>
 </head>
  <!-- -->
 
@@ -92,8 +109,9 @@ if (isset($_SESSION['iniciarSesion']) && $_SESSION['iniciarSesion'] == "ok") {
       $_GET['ruta'] == "inicio" ||
       $_GET['ruta'] == "Usuarios" ||
       $_GET['ruta'] == "Productos" ||
+      $_GET['ruta'] == "Clientes" ||
+      $_GET['ruta'] == "venta" ||
       $_GET['ruta'] == "CrearVenta" ||
-      $_GET['ruta'] == "ReporteVenta" ||
       $_GET['ruta'] == "Calendario" ||
       $_GET['ruta'] == "categorias" ||
       $_GET['ruta'] == "logout"
@@ -119,6 +137,8 @@ if (isset($_SESSION['iniciarSesion']) && $_SESSION['iniciarSesion'] == "ok") {
 <script src="vistas/js/usuarios.js"></script>
 <script src="vistas/js/categorias.js"></script>
 <script src="vistas/js/productos.js"></script>
+<script src="vistas/js/clientes.js"></script>
+
 </body>
 
 </html>
